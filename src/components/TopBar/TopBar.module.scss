@@ -1,0 +1,121 @@
+.header__topbar {
+  padding: 8px 0;
+
+  @media only screen and (min-width: 768px) {
+    padding: 10px 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 991px) {
+      justify-content: space-around !important;
+    }
+  }
+}
+
+.header__topbar__info {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 0;
+  @media only screen and (max-width: 768px) {
+    order: -1;
+    justify-content: center;
+    width: 100%;
+
+    & a {
+      font-size: 1rem;
+    }
+  }
+}
+.header__info {
+  &__list {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 85%;
+      background: var(--border-color);
+      right: -11px;
+      top: 50%;
+      transform: translatey(-50%);
+    }
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: var(--inter-fonts);
+    line-height: 1.8rem;
+    & svg {
+      margin-right: 0.2rem;
+    }
+    &.text-white {
+      &:hover {
+        color: var(--secondary-color) !important;
+      }
+    }
+  }
+}
+.header__top {
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    @media only screen and (max-width: 575px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem 0;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+.social__share {
+  display: flex;
+  gap: 1.5rem;
+}
+.header__link__menu {
+  position: relative;
+  &:last-child {
+    &::before {
+      @media only screen and (max-width: 575px) {
+        display: none;
+      }
+    }
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 85%;
+    background: var(--border-color);
+    right: -11px;
+    top: 50%;
+    transform: translatey(-50%);
+  }
+  &__text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: var(--inter-fonts);
+    & svg {
+      margin-right: 0.2rem;
+    }
+    &.text-white {
+      &:hover {
+        color: var(--secondary-color) !important;
+      }
+    }
+  }
+}

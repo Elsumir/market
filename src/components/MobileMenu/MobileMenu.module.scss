@@ -1,0 +1,57 @@
+.offcanvas__stikcy__toolbar {
+  position: fixed;
+  bottom: 0;
+  background: var(--body-background-color);
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.12);
+  padding: 10px 20px;
+  display: none;
+  @media only screen and (min-width: 500px) {
+    padding: 10px 40px;
+  }
+  @media only screen and (min-width: 768px) {
+    padding: 10px 60px;
+  }
+  @media only screen and (max-width: 991px) {
+    display: grid;
+  }
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    &:hover {
+      & .offcanvas__stikcy__toolbar__icon {
+        background: var(--secondary-color);
+        color: var(--white-color);
+      }
+    }
+    & > * {
+      pointer-events: none;
+    }
+    &.minicart__open__btn {
+      flex-direction: column;
+    }
+  }
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    background: var(--theme-color);
+    line-height: 3.8rem;
+    border-radius: 50%;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 6px;
+  }
+}

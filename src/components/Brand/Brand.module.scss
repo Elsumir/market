@@ -1,0 +1,21 @@
+.brand__section__inner {
+  gap: 3rem;
+  background: linear-gradient(to right, #faeef2, #f1f3fb);
+  padding: 3rem 3rem;
+  border-radius: 5px;
+  @media only screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+}
+
+.brang__logo__img {
+  opacity: 0.5;
+  &:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  @media only screen and (max-width: 479px) {
+    max-width: 125px;
+  }
+}
